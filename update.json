@@ -1,8 +1,8 @@
 {
   "versionCode": 2,
-  "versionName": "1.1",
+  "versionName": "1.2",
   "note": "新增功能：打开 App 自动检测新版本，有新版本时可一键下载升级。",
-  "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
+  "apk": "https://h1052.lanosso.com/dfbb05114854537f27062393d2f2976d/6a9f9755/2026/09/08/c332febf572f49179b9cdbbaefde9b3e.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-armeabi-v7a-release.apk"
 }
