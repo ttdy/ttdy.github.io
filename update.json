@@ -1,7 +1,7 @@
 {
-  "versionCode": 2,
-  "versionName": "1.1",
-  "note": "docs: 补充一键发版操作流程与注意事项 ",
+  "versionCode": 3,
+  "versionName": "1.2",
+  "note": "v1.2：启动时自动检测新版本，发现新版弹窗提示并支持一键下载升级 ",
   "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-armeabi-v7a-release.apk"
