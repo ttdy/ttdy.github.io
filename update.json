@@ -1,7 +1,7 @@
 {
   "versionCode": 2,
-  "versionName": "1.2",
-  "note": "新增功能：打开 App 自动检测新版本，有新版本时可一键下载升级。",
+  "versionName": "1.1",
+  "note": "fix(ci): 用 jq 生成 update.json 避免 heredoc 缩进导致的 YAML 解析失败 ",
   "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-armeabi-v7a-release.apk"
