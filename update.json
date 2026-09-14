@@ -1,5 +1,5 @@
 {
-  "versionCode": 5,
+  "versionCode": 3,
   "versionName": "1.4",
   "note": "release: v1.4 修复小尺寸/竖屏视频全屏失效、新增全屏亮度/音量手势与影片收藏（修复 Activity.setImmersive 命名冲突导致编译失败） ",
   "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
