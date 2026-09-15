@@ -1,7 +1,7 @@
 {
   "versionCode": 7,
   "versionName": "1.6",
-  "note": "fix(ci): setup-android 只安装 platform-tools，避免安装已被移除的 tools 包导致构建失败 ",
+  "note": "v1.6：删除详情页“继续播放”按钮",
   "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-armeabi-v7a-release.apk"
