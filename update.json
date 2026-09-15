@@ -1,7 +1,7 @@
 {
-  "versionCode": 6,
-  "versionName": "1.5",
-  "note": "release: v1.5（versionCode 6）普通区/高级区历史与收藏分开存储，播放历史上限30条，修复续播进度seek被提前清空导致的无效问题 ",
+  "versionCode": 7,
+  "versionName": "1.6",
+  "note": "fix(ci): setup-android 只安装 platform-tools，避免安装已被移除的 tools 包导致构建失败 ",
   "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-armeabi-v7a-release.apk"
