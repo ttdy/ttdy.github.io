@@ -1,7 +1,7 @@
 {
-  "versionCode": 7,
-  "versionName": "1.6",
-  "note": "v1.6：删除详情页“继续播放”按钮",
+  "versionCode": 8,
+  "versionName": "1.7",
+  "note": "feat(app): 采集直连失败自动回退 CF 中转，修复手机流量下取数失败 - node-server/server.js 加中转回退（采集接口/远程配置/m3u8/媒体流） - versionCode 7->8，versi",
   "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-armeabi-v7a-release.apk"
