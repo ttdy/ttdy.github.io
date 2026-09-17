@@ -1,7 +1,7 @@
 {
   "versionCode": 2,
   "versionName": "1.1",
-  "note": "feat(app): 采集直连失败自动回退 CF 中转，修复手机流量下取数失败 - node-server/server.js 加中转回退 - versionCode 1->2，versionName 1.0->1.1 Co-authored-by: monkeycode-ai ",
+  "note": "v1.1：修复手机流量下无法读取接口数据的问题",
   "apk": "https://github.com/ttdy/vod-box-android-tap/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android-tap/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android-tap/releases/latest/download/app-armeabi-v7a-release.apk"
