@@ -1,7 +1,7 @@
 {
   "versionCode": 7,
   "versionName": "1.6",
-  "note": "v1.6：删除详情页“继续播放”按钮",
+  "note": "Revert \"feat(app): 新增连点版变体 APK（连点左上角标题3次+密码进入高级功能），主版保持按钮入口不变\" This reverts commit 52e06fdc36d53ccff9ac98ab9f2b2b32b8db33b7. ",
   "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-armeabi-v7a-release.apk"
