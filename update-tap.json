@@ -1,0 +1,8 @@
+{
+  "versionCode": 7,
+  "versionName": "1.6",
+  "note": "fix(ci): 适配 flavor 输出路径 apk/<flavor>/release，统一整理产物为 app-*.apk 与 app-tap-*.apk （连点版）",
+  "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-tap-arm64-v8a-release.apk",
+  "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-tap-arm64-v8a-release.apk",
+  "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-tap-armeabi-v7a-release.apk"
+}
