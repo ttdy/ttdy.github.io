@@ -1,7 +1,7 @@
 {
-  "versionCode": 8,
-  "versionName": "1.7",
-  "note": "v1.7：修复手机流量下无法读取接口数据的问题",
+  "versionCode": 9,
+  "versionName": "1.8",
+  "note": "fix(app): 中转域名改为 CF 多域名按序回退，修复 cc.cd 后缀被运营商限制导致取数失败 - 与连点版同步：relay 候选 tvgg.de5.net / vod-box.pages.dev / tvdd.us.ci / ttys",
   "apk": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android/releases/latest/download/app-armeabi-v7a-release.apk"
