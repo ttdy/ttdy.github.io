@@ -1,7 +1,7 @@
 {
-  "versionCode": 3,
-  "versionName": "1.2",
-  "note": "v1.2：修复手机流量下无法读取接口数据（中转改用 CF 多域名）",
+  "versionCode": 4,
+  "versionName": "1.3",
+  "note": "v1.3：远程接口三地址自动回退，拉取成功后 10 分钟再刷新 ",
   "apk": "https://github.com/ttdy/vod-box-android-tap/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm64": "https://github.com/ttdy/vod-box-android-tap/releases/latest/download/app-arm64-v8a-release.apk",
   "apkArm": "https://github.com/ttdy/vod-box-android-tap/releases/latest/download/app-armeabi-v7a-release.apk"
