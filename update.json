@@ -1,7 +1,7 @@
 {
   "versionCode": 10,
   "versionName": "1.9",
-  "note": "chore: 升级包下载改用 CF 加速链接（/dl 反代） ",
+  "note": "v1.9：远程接口三地址自动回退，拉取成功后 10 分钟再刷新",
   "apk": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/main/app-armeabi-v7a-release.apk"
