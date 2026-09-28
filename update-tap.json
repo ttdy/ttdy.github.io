@@ -1,7 +1,7 @@
 {
   "versionCode": 5,
   "versionName": "1.4",
-  "note": "v1.4：新增云同步，历史收藏可跨设备保存",
+  "note": "fix(sync): 同步入口移到收藏页，改用事件委托修复按钮无响应 ",
   "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk"
