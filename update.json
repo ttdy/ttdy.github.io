@@ -1,7 +1,7 @@
 {
-  "versionCode": 10,
-  "versionName": "1.9",
-  "note": "v1.9：远程接口三地址自动回退，拉取成功后 10 分钟再刷新",
+  "versionCode": 1,
+  "versionName": "1.1",
+  "note": "v1.1：收藏上限调整为 100 条 ",
   "apk": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/main/app-armeabi-v7a-release.apk"
