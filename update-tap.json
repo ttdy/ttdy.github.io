@@ -1,7 +1,7 @@
 {
   "versionCode": 1,
   "versionName": "1.1",
-  "note": "fix(sync): 改为整份快照按时间戳覆盖，删除不再被云端恢复 ",
+  "note": "v1.1：新增云同步，历史收藏可跨设备保存；修复删除后又被恢复的问题",
   "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk"
