@@ -1,7 +1,7 @@
 {
   "versionCode": 14,
   "versionName": "1.13",
-  "note": "chore: 发布 v1.13（versionCode 14）用于验证下载进度条 ",
+  "note": "v1.13：更新下载显示实时进度条（修复转圈不显示进度）",
   "apk": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/main/app-armeabi-v7a-release.apk"
