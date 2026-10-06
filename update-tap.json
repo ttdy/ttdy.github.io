@@ -1,7 +1,7 @@
 {
-  "versionCode": 1,
-  "versionName": "1.1",
-  "note": "v1.1：新增云同步与删除同步修复；修复首次启动卡启动页的问题",
+  "versionCode": 7,
+  "versionName": "1.6",
+  "note": "feat: 中转/同步测速优选；发布 v1.6（versionCode 7） ",
   "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk"
