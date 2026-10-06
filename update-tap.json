@@ -1,7 +1,7 @@
 {
   "versionCode": 10,
   "versionName": "1.9",
-  "note": "v1.9：更新下载显示实时进度条（修复转圈不显示进度）",
+  "note": "feat(sync): 拆分为保存到云端/从云端恢复；空数据不再上传，避免覆盖云端记录 ",
   "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk"
