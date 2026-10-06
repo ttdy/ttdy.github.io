@@ -1,7 +1,7 @@
 {
-  "versionCode": 9,
-  "versionName": "1.8",
-  "note": "fix(update): 进度条初始即为水平模式，修复下载时一直转圈不显示进度；发布 v1.8（versionCode 9） ",
+  "versionCode": 10,
+  "versionName": "1.9",
+  "note": "chore: 发布 v1.9（versionCode 10）用于验证下载进度条 ",
   "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk"
