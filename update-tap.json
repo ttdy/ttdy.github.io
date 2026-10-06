@@ -1,7 +1,7 @@
 {
   "versionCode": 11,
   "versionName": "1.10",
-  "note": "chore: 发布 v1.10（versionCode 11），同步改为保存到云端/从云端恢复 ",
+  "note": "v1.10：云同步改为「保存到云端」「从云端恢复」两个按钮，修复新装后同步可能清空记录的问题",
   "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk"
