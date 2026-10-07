@@ -1,7 +1,7 @@
 {
   "versionCode": 16,
   "versionName": "1.15",
-  "note": "perf: v1.15 数据/播放直连失败冷却+5秒超时，修复WiFi下加载慢 ",
+  "note": "v1.15：修复WiFi下加载采集数据慢（直连失败后自动改走中转并缓存状态，直连超时降至5秒）",
   "apk": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/main/app-armeabi-v7a-release.apk"
