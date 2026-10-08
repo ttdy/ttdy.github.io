@@ -1,28 +1,5 @@
 {
   "_说明": "影视盒子外部接口配置。服务端(server.js/api.php)会定期拉取本文件确定采集接口，修改后保存即可生效(约 1 分钟内自动刷新)。顶层为源 key -> {name,api,format,cats}；_pro 为高级模式(/aaa 或 mode=pro)的源。请勿删除本文件所在仓库。",
-  "jisu": {
-    "name": "极速资源",
-    "api": "https://jszyapi.com/api.php/provide/vod/",
-    "format": "json",
-    "cats": [
-      {
-        "id": "1",
-        "name": "电影"
-      },
-      {
-        "id": "2",
-        "name": "电视剧"
-      },
-      {
-        "id": "3",
-        "name": "综艺"
-      },
-      {
-        "id": "4",
-        "name": "动漫"
-      }
-    ]
-  },
   "feifan": {
     "name": "非凡资源",
     "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
