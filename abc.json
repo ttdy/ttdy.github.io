@@ -92,6 +92,29 @@
       }
     ]
   },
+  "maotai": {
+    "name": "茅台资源",
+    "api": "https://caiji.maotaizy.cc/api.php/provide/vod",
+    "format": "json",
+    "cats": [
+      {
+        "id": "1",
+        "name": "电影"
+      },
+      {
+        "id": "2",
+        "name": "电视剧"
+      },
+      {
+        "id": "3",
+        "name": "综艺"
+      },
+      {
+        "id": "4",
+        "name": "动漫"
+      }
+    ]
+  },
   "_pro": {
     "lsb": {
       "name": "lsb资源",
