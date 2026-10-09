@@ -1,7 +1,7 @@
 {
-  "versionCode": 13,
-  "versionName": "1.12",
-  "note": "v1.12：数据加载更快（直连与中转并行竞速，不再白等超时），首屏海报懒加载不再卡整页",
+  "versionCode": 14,
+  "versionName": "1.13",
+  "note": "v1.13：新增线路自动优选，数据加载、播放与更新下载自动选最快的 CF 边缘节点与镜像域名，网络更稳更快 ",
   "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
   "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk"
