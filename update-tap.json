@@ -1,7 +1,7 @@
 {
   "versionCode": 15,
   "versionName": "1.14",
-  "note": "ci: 升级源下载地址加版本参数以绕过边缘缓存 ",
+  "note": "ci: 发版后上传 APK 到 R2 下载加速 ",
   "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk?v=1.14",
   "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk?v=1.14",
   "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk?v=1.14"
