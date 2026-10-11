@@ -1,7 +1,7 @@
 {
   "versionCode": 19,
   "versionName": "1.18",
-  "note": "直连 R2 下载加速 ",
+  "note": "ci: 升级源改为 R2 直链 ",
   "apk": "https://pub-4b366d82a74c4d3fa02f6251e0c62640.r2.dev/v1.18/main/app-arm64-v8a-release.apk",
   "apkArm64": "https://pub-4b366d82a74c4d3fa02f6251e0c62640.r2.dev/v1.18/main/app-arm64-v8a-release.apk",
   "apkArm": "https://pub-4b366d82a74c4d3fa02f6251e0c62640.r2.dev/v1.18/main/app-armeabi-v7a-release.apk"
