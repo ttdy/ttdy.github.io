@@ -2,7 +2,7 @@
   "versionCode": 19,
   "versionName": "1.18",
   "note": "v1.18：云同步仅在记录变化时上传并大幅放宽间隔，避免频繁写入导致同步失败 ",
-  "apk": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
-  "apkArm64": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk",
-  "apkArm": "https://tvgg.de5.net/dl/main/app-armeabi-v7a-release.apk"
+  "apk": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk?v=1.18",
+  "apkArm64": "https://tvgg.de5.net/dl/main/app-arm64-v8a-release.apk?v=1.18",
+  "apkArm": "https://tvgg.de5.net/dl/main/app-armeabi-v7a-release.apk?v=1.18"
 }

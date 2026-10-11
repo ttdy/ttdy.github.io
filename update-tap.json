@@ -2,7 +2,7 @@
   "versionCode": 15,
   "versionName": "1.14",
   "note": "v1.14：云同步仅在记录变化时上传并大幅放宽间隔，避免频繁写入导致同步失败 ",
-  "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
-  "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk",
-  "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk"
+  "apk": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk?v=1.14",
+  "apkArm64": "https://tvgg.de5.net/dl/tap/app-arm64-v8a-release.apk?v=1.14",
+  "apkArm": "https://tvgg.de5.net/dl/tap/app-armeabi-v7a-release.apk?v=1.14"
 }
