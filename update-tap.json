@@ -1,7 +1,7 @@
 {
   "versionCode": 15,
   "versionName": "1.14",
-  "note": "下载直连 R2 自定义域加速 ",
+  "note": "ci: 升级源改为 R2 自定义域直链 ",
   "apk": "https://dl.tvgg.de5.net/v1.14/tap/app-arm64-v8a-release.apk",
   "apkArm64": "https://dl.tvgg.de5.net/v1.14/tap/app-arm64-v8a-release.apk",
   "apkArm": "https://dl.tvgg.de5.net/v1.14/tap/app-armeabi-v7a-release.apk"
