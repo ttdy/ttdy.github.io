@@ -116,6 +116,41 @@
     ]
   },
   "_pro": {
+    "senlin": {
+      "name": "senlin资源",
+      "api": "https://slapibf.com/api.php/provide/vod",
+      "format": "json",
+      "cats": [
+        {
+          "id": "20",
+          "name": "精品推荐"
+        },
+        {
+          "id": "31",
+          "name": "萝莉少女"
+        },
+        {
+          "id": "36",
+          "name": "口交颜射"
+        },
+        {
+          "id": "45",
+          "name": "剧情介绍"
+        },
+        {
+          "id": "46",
+          "name": "多人多P"
+        },
+        {
+          "id": "56",
+          "name": "护士"
+        },
+        {
+          "id": "58",
+          "name": "网曝系列"
+        }
+      ]
+    },
     "fqzy": {
       "name": "fqzy资源",
       "api": "https://fqzy.me/api.php/provide/vod/",
@@ -160,41 +195,6 @@
         {
           "id": "32",
           "name": "韩国直播"
-        }
-      ]
-    },
-    "senlin": {
-      "name": "senlin资源",
-      "api": "https://slapibf.com/api.php/provide/vod",
-      "format": "json",
-      "cats": [
-        {
-          "id": "20",
-          "name": "精品推荐"
-        },
-        {
-          "id": "31",
-          "name": "萝莉少女"
-        },
-        {
-          "id": "36",
-          "name": "口交颜射"
-        },
-        {
-          "id": "45",
-          "name": "剧情介绍"
-        },
-        {
-          "id": "46",
-          "name": "多人多P"
-        },
-        {
-          "id": "56",
-          "name": "护士"
-        },
-        {
-          "id": "58",
-          "name": "网曝系列"
         }
       ]
     },
