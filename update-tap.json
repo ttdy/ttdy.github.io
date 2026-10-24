@@ -1,8 +1,8 @@
 {
-  "versionCode": 21,
-  "versionName": "1.20",
-  "note": "feat: 云同步加入搜索记录，普通/高级区独立保存与恢复 ",
-  "apk": "https://dl.tvgg.de5.net/v1.20/tap/app-arm64-v8a-release.apk",
-  "apkArm64": "https://dl.tvgg.de5.net/v1.20/tap/app-arm64-v8a-release.apk",
-  "apkArm": "https://dl.tvgg.de5.net/v1.20/tap/app-armeabi-v7a-release.apk"
+  "versionCode": 22,
+  "versionName": "1.21",
+  "note": "feat: 优选IP池改为远程配置并发布 v1.21 (vc22) ",
+  "apk": "https://dl.tvgg.de5.net/v1.21/tap/app-arm64-v8a-release.apk",
+  "apkArm64": "https://dl.tvgg.de5.net/v1.21/tap/app-arm64-v8a-release.apk",
+  "apkArm": "https://dl.tvgg.de5.net/v1.21/tap/app-armeabi-v7a-release.apk"
 }
