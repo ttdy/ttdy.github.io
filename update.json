@@ -1,8 +1,8 @@
 {
-  "versionCode": 21,
-  "versionName": "1.20",
-  "note": "chore: 发布主版 v1.20（vc21） ",
-  "apk": "https://dl.tvgg.de5.net/v1.20/main/app-arm64-v8a-release.apk",
-  "apkArm64": "https://dl.tvgg.de5.net/v1.20/main/app-arm64-v8a-release.apk",
-  "apkArm": "https://dl.tvgg.de5.net/v1.20/main/app-armeabi-v7a-release.apk"
+  "versionCode": 22,
+  "versionName": "1.21",
+  "note": "feat: 发布主版 v1.21 (vc22) 支持远程优选IP池 ",
+  "apk": "https://dl.tvgg.de5.net/v1.21/main/app-arm64-v8a-release.apk",
+  "apkArm64": "https://dl.tvgg.de5.net/v1.21/main/app-arm64-v8a-release.apk",
+  "apkArm": "https://dl.tvgg.de5.net/v1.21/main/app-armeabi-v7a-release.apk"
 }
