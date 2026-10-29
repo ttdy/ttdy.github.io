@@ -1,13 +1,13 @@
 {
   "_说明": "影视盒子外部接口配置。服务端(server.js/api.php)会定期拉取本文件确定采集接口，修改后保存即可生效(约 1 分钟内自动刷新)。顶层为源 key -> {name,api,format,cats}；_pro 为高级模式(/aaa 或 mode=pro)的源。请勿删除本文件所在仓库。",
-  "maotai": {
-    "name": "茅台资源",
-    "api": "https://caiji.maotaizy.cc/api.php/provide/vod",
+  "feifan": {
+    "name": "非凡资源",
+    "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
     "format": "json",
     "cats": [
       {
-        "id": "37",
-        "name": "短剧大全"
+        "id": "36",
+        "name": "短剧"
       },
       {
         "id": "2",
@@ -23,14 +23,37 @@
       }
     ]
   },
-  "feifan": {
-    "name": "非凡资源",
-    "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+  "hongniu": {
+    "name": "红牛资源",
+    "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
     "format": "json",
     "cats": [
       {
-        "id": "36",
-        "name": "短剧"
+        "id": "1",
+        "name": "电影"
+      },
+      {
+        "id": "2",
+        "name": "电视剧"
+      },
+      {
+        "id": "37",
+        "name": "短剧大全"
+      },
+      {
+        "id": "50",
+        "name": "擦边短剧"
+      }
+    ]
+  },
+  "maotai": {
+    "name": "茅台资源",
+    "api": "https://caiji.maotaizy.cc/api.php/provide/vod",
+    "format": "json",
+    "cats": [
+      {
+        "id": "37",
+        "name": "短剧大全"
       },
       {
         "id": "2",
@@ -65,29 +88,6 @@
       },
       {
         "id": "74",
-        "name": "擦边短剧"
-      }
-    ]
-  },
-  "hongniu": {
-    "name": "红牛资源",
-    "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
-    "format": "json",
-    "cats": [
-      {
-        "id": "1",
-        "name": "电影"
-      },
-      {
-        "id": "2",
-        "name": "电视剧"
-      },
-      {
-        "id": "37",
-        "name": "短剧大全"
-      },
-      {
-        "id": "50",
         "name": "擦边短剧"
       }
     ]
