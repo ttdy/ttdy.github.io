@@ -1,33 +1,115 @@
 ﻿<!DOCTYPE html>
-<html lang="zh">
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-       <title>影视</title>
-        <meta name="keywords" content="影视" />
-        <meta name="description" content="影视" />
-        <link rel="apple-touch-icon" href="https://cdn.mom1.cn/1/favicon.ico">
-    </head>
-     <body style="padding:12% 5% 5% 5%;background-image:url(style/images/img/logo.jpeg);">
-        <div style="text-align:center;border-width:1px;border-style:solid;border-color:rgb(2, 204, 245);background-color:#79918e6b;border-radius:20px;">
-          <p>
-          	<img style="border-radius:50%;max-width:100px;max-height:100px;" src="style/images/1.jpg"></p>
-             <h1 style="color:#fff;"><strong>影视</strong>
-             </h1>
-           <p style="font-size:3vh;color:#fff;">思念很长，所以一日如十年，时间很短，所以十年如一日。</p>
-           <p style="line-height:3;">
-           <a style="border-radius:10px;padding:7px 30px;color:#fff;border-style:solid;text-decoration:none;" href="https://kvideo-nev.pages.dev/">影视一站</a>
-           <a style="border-radius:10px;padding:7px 30px;color:#fff;border-style:solid;text-decoration:none;" href="https://kvideo-nev.pages.dev/premium">影视二站</a>
-         </p><p><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-            <span style="color:#bd8787;">111:<script>
-                    document.write(returnCitySN["cip"])
-                   </script></span>
-         </p>
-         <p style="color:#fff;">111:<script>
-                    document.write(returnCitySN["cname"])
-                   </script>© <a style="text-decoration:none;color:#fff;" href="">OD</a>.版权所有</p>
-                   <script type="text/javascript" color="255,255,255" opacity='0.7' zIndex="-2" count="200" src="style/js/canvas-nest.min.js"></script>
-        </div>
-     
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>聚合影院</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      font-family: system-ui, -apple-system, sans-serif; background: #111; color: #eee; }
+    .box { width: min(360px, 90vw); text-align: center; }
+    h1 { font-size: 20px; margin: 0 0 12px; }
+    .tip { font-size: 14px; color: #aaa; min-height: 22px; }
+    .list { margin: 16px 0 0; padding: 0; list-style: none; font-size: 13px; color: #888; text-align: left; }
+    .list li { padding: 6px 0; border-bottom: 1px solid #222; display: flex; justify-content: space-between; }
+    .ok { color: #7cc36a; }
+    .fail { color: #e06666; }
+    .btns { margin-top: 18px; display: none; flex-direction: column; gap: 8px; }
+    .btns.show { display: flex; }
+    a, button { display: block; width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #333;
+      background: #1c1c1c; color: #eee; text-decoration: none; font-size: 14px; cursor: pointer; }
+    button { font-family: inherit; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>聚合影院</h1>
+    <div class="tip" id="tip">正在选择最快线路…</div>
+    <ul class="list" id="list"></ul>
+    <div class="btns" id="btns">
+      <a href="https://tvgg.de5.net/">tvgg.de5.net</a>
+      <a href="https://vod-box.pages.dev/">vod-box.pages.dev</a>
+      <a href="https://tvdd.us.ci/">tvdd.us.ci</a>
+      <a href="https://ttys.cn.mt/">ttys.cn.mt</a>
+      <button type="button" id="retry">重新测速</button>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var HOSTS = [
+        'https://tvgg.de5.net',
+        'https://vod-box.pages.dev',
+        'https://tvdd.us.ci',
+        'https://ttys.cn.mt'
+      ];
+      var KEY = 'vb_jump_host';
+      var AT = 'vb_jump_at';
+      var TTL = 10 * 60 * 1000;
+      var tip = document.getElementById('tip');
+      var list = document.getElementById('list');
+      var btns = document.getElementById('btns');
+
+      function ping(host) {
+        var t0 = Date.now();
+        var ctrl = new AbortController();
+        var timer = setTimeout(function () { ctrl.abort(); }, 2000);
+        return fetch(host + '/abc.json?t=' + t0, { mode: 'no-cors', cache: 'no-store', signal: ctrl.signal })
+          .then(function () { return { host: host, ms: Date.now() - t0 }; })
+          .catch(function () { return null; })
+          .then(function (r) { clearTimeout(timer); return r; });
+      }
+
+      function go(host) {
+        try {
+          localStorage.setItem(KEY, host);
+          localStorage.setItem(AT, String(Date.now()));
+        } catch (e) {}
+        location.replace(host + '/');
+      }
+
+      function run(force) {
+        tip.textContent = '正在选择最快线路…';
+        list.innerHTML = '';
+        btns.classList.remove('show');
+        if (!force) {
+          try {
+            var saved = localStorage.getItem(KEY);
+            var at = Number(localStorage.getItem(AT) || 0);
+            if (saved && Date.now() - at < TTL) {
+              tip.textContent = '进入上次线路…';
+              go(saved);
+              return;
+            }
+          } catch (e) {}
+        }
+        Promise.all(HOSTS.map(ping)).then(function (rows) {
+          var ok = [];
+          HOSTS.forEach(function (h, i) {
+            var r = rows[i];
+            var li = document.createElement('li');
+            if (r) {
+              ok.push(r);
+              li.innerHTML = '<span class="ok">' + h.replace(/^https:\/\//, '') + '</span><span class="ok">' + r.ms + 'ms</span>';
+            } else {
+              li.innerHTML = '<span class="fail">' + h.replace(/^https:\/\//, '') + '</span><span class="fail">超时</span>';
+            }
+            list.appendChild(li);
+          });
+          ok.sort(function (a, b) { return a.ms - b.ms; });
+          if (ok.length) {
+            tip.textContent = '进入 ' + ok[0].host.replace(/^https:\/\//, '');
+            setTimeout(function () { go(ok[0].host); }, 200);
+          } else {
+            tip.textContent = '线路都不可达，请手动选择';
+            btns.classList.add('show');
+          }
+        });
+      }
+
+      document.getElementById('retry').onclick = function () { run(true); };
+      run(false);
+    })();
+  </script>
 </body>
 </html>
