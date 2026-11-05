@@ -28,8 +28,8 @@
     <div class="tip" id="tip">正在选择最快线路…</div>
     <ul class="list" id="list"></ul>
     <div class="btns" id="btns">
-      <a href="https://tvgg.de5.net/">tvgg.de5.net</a>
       <a href="https://vod-box.pages.dev/">vod-box.pages.dev</a>
+      <a href="https://tvgg.de5.net/">tvgg.de5.net</a>
       <a href="https://tvdd.us.ci/">tvdd.us.ci</a>
       <a href="https://ttys.cn.mt/">ttys.cn.mt</a>
       <button type="button" id="retry">重新测速</button>
@@ -38,14 +38,14 @@
   <script>
     (function () {
       var HOSTS = [
-        'https://tvgg.de5.net',
         'https://vod-box.pages.dev',
+        'https://tvgg.de5.net',
         'https://tvdd.us.ci',
         'https://ttys.cn.mt'
       ];
       var KEY = 'vb_jump_host';
       var AT = 'vb_jump_at';
-      var TTL = 10 * 60 * 1000;
+      var TTL = 2 * 60 * 1000;
       var tip = document.getElementById('tip');
       var list = document.getElementById('list');
       var btns = document.getElementById('btns');
@@ -53,9 +53,12 @@
       function ping(host) {
         var t0 = Date.now();
         var ctrl = new AbortController();
-        var timer = setTimeout(function () { ctrl.abort(); }, 2000);
-        return fetch(host + '/abc.json?t=' + t0, { mode: 'no-cors', cache: 'no-store', signal: ctrl.signal })
-          .then(function () { return { host: host, ms: Date.now() - t0 }; })
+        var timer = setTimeout(function () { ctrl.abort(); }, 2500);
+        return fetch(host + '/abc.json?t=' + t0, { cache: 'no-store', signal: ctrl.signal })
+          .then(function (r) {
+            if (!r.ok) return null;
+            return { host: host, ms: Date.now() - t0 };
+          })
           .catch(function () { return null; })
           .then(function (r) { clearTimeout(timer); return r; });
       }
@@ -76,7 +79,7 @@
           try {
             var saved = localStorage.getItem(KEY);
             var at = Number(localStorage.getItem(AT) || 0);
-            if (saved && Date.now() - at < TTL) {
+            if (saved === HOSTS[0] && Date.now() - at < TTL) {
               tip.textContent = '进入上次线路…';
               go(saved);
               return;
@@ -96,10 +99,12 @@
             }
             list.appendChild(li);
           });
+          var pages = ok.filter(function (x) { return x.host === HOSTS[0]; })[0];
           ok.sort(function (a, b) { return a.ms - b.ms; });
-          if (ok.length) {
-            tip.textContent = '进入 ' + ok[0].host.replace(/^https:\/\//, '');
-            setTimeout(function () { go(ok[0].host); }, 200);
+          var pick = pages || ok[0];
+          if (pick) {
+            tip.textContent = '进入 ' + pick.host.replace(/^https:\/\//, '');
+            setTimeout(function () { go(pick.host); }, 200);
           } else {
             tip.textContent = '线路都不可达，请手动选择';
             btns.classList.add('show');
