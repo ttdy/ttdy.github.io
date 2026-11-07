@@ -1,8 +1,8 @@
 {
-  "versionCode": 23,
-  "versionName": "1.22",
-  "note": "feat: 采集失败走国内 PHP 站，发布 v1.22 直连/CF 慢时与 tttv.66ghz.com、tttv.10001mb.com 竞速拉列表。 ",
-  "apk": "https://dl.tvgg.de5.net/v1.22/tap/app-arm64-v8a-release.apk",
-  "apkArm64": "https://dl.tvgg.de5.net/v1.22/tap/app-arm64-v8a-release.apk",
-  "apkArm": "https://dl.tvgg.de5.net/v1.22/tap/app-armeabi-v7a-release.apk"
+  "versionCode": 24,
+  "versionName": "1.23",
+  "note": "fix: 高级区分类混源，发布 v1.23 PHP 回退补 mode=pro；普通/高级区源选择分开记忆。 ",
+  "apk": "https://dl.tvgg.de5.net/v1.23/tap/app-arm64-v8a-release.apk",
+  "apkArm64": "https://dl.tvgg.de5.net/v1.23/tap/app-arm64-v8a-release.apk",
+  "apkArm": "https://dl.tvgg.de5.net/v1.23/tap/app-armeabi-v7a-release.apk"
 }
