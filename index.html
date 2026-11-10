@@ -28,20 +28,26 @@
     <div class="tip" id="tip">正在选择最快线路…</div>
     <ul class="list" id="list"></ul>
     <div class="btns" id="btns">
-      <a href="https://vod-box.pages.dev/">vod-box.pages.dev</a>
       <a href="https://tvgg.de5.net/">tvgg.de5.net</a>
+      <a href="https://vod-box.pages.dev/">vod-box.pages.dev</a>
       <a href="https://tvdd.us.ci/">tvdd.us.ci</a>
       <a href="https://ttys.cn.mt/">ttys.cn.mt</a>
+      <a href="https://tttv.66ghz.com/">tttv.66ghz.com</a>
+      <a href="https://tttv.10001mb.com/">tttv.10001mb.com</a>
       <button type="button" id="retry">重新测速</button>
     </div>
   </div>
   <script>
     (function () {
       var HOSTS = [
-        'https://vod-box.pages.dev',
         'https://tvgg.de5.net',
+        'https://vod-box.pages.dev',
         'https://tvdd.us.ci',
         'https://ttys.cn.mt'
+      ];
+      var PHP_HOSTS = [
+        'https://tttv.66ghz.com',
+        'https://tttv.10001mb.com'
       ];
       var KEY = 'vb_jump_host';
       var AT = 'vb_jump_at';
@@ -50,11 +56,13 @@
       var list = document.getElementById('list');
       var btns = document.getElementById('btns');
 
-      function ping(host) {
+      function ping(host, path) {
         var t0 = Date.now();
         var ctrl = new AbortController();
         var timer = setTimeout(function () { ctrl.abort(); }, 2500);
-        return fetch(host + '/abc.json?t=' + t0, { cache: 'no-store', signal: ctrl.signal })
+        var url = host + (path || '/abc.json');
+        url += (url.indexOf('?') >= 0 ? '&' : '?') + 't=' + t0;
+        return fetch(url, { cache: 'no-store', signal: ctrl.signal })
           .then(function (r) {
             if (!r.ok) return null;
             return { host: host, ms: Date.now() - t0 };
@@ -71,45 +79,73 @@
         location.replace(host + '/');
       }
 
+      function known(host) {
+        return HOSTS.indexOf(host) >= 0 || PHP_HOSTS.indexOf(host) >= 0;
+      }
+
       function run(force) {
         tip.textContent = '正在选择最快线路…';
         list.innerHTML = '';
         btns.classList.remove('show');
+        function probeAll() {
+          Promise.all(HOSTS.map(function (h) { return ping(h, '/abc.json'); })).then(function (rows) {
+            var ok = [];
+            HOSTS.forEach(function (h, i) {
+              var r = rows[i];
+              var li = document.createElement('li');
+              if (r) {
+                ok.push(r);
+                li.innerHTML = '<span class="ok">' + h.replace(/^https:\/\//, '') + '</span><span class="ok">' + r.ms + 'ms</span>';
+              } else {
+                li.innerHTML = '<span class="fail">' + h.replace(/^https:\/\//, '') + '</span><span class="fail">超时</span>';
+              }
+              list.appendChild(li);
+            });
+            ok.sort(function (a, b) { return a.ms - b.ms; });
+            if (ok[0]) {
+              tip.textContent = '进入 ' + ok[0].host.replace(/^https:\/\//, '');
+              setTimeout(function () { go(ok[0].host); }, 200);
+              return;
+            }
+            Promise.all(PHP_HOSTS.map(function (h) { return ping(h, '/api.php?action=sources'); })).then(function (phpRows) {
+              var phpOk = [];
+              PHP_HOSTS.forEach(function (h, i) {
+                var r = phpRows[i];
+                var li = document.createElement('li');
+                if (r) {
+                  phpOk.push(r);
+                  li.innerHTML = '<span class="ok">' + h.replace(/^https:\/\//, '') + '</span><span class="ok">' + r.ms + 'ms</span>';
+                } else {
+                  li.innerHTML = '<span class="fail">' + h.replace(/^https:\/\//, '') + '</span><span class="fail">超时</span>';
+                }
+                list.appendChild(li);
+              });
+              phpOk.sort(function (a, b) { return a.ms - b.ms; });
+              if (phpOk[0]) {
+                tip.textContent = '进入 ' + phpOk[0].host.replace(/^https:\/\//, '');
+                setTimeout(function () { go(phpOk[0].host); }, 200);
+              } else {
+                tip.textContent = '线路都不可达，请手动选择';
+                btns.classList.add('show');
+              }
+            });
+          });
+        }
         if (!force) {
           try {
             var saved = localStorage.getItem(KEY);
             var at = Number(localStorage.getItem(AT) || 0);
-            if (saved === HOSTS[0] && Date.now() - at < TTL) {
-              tip.textContent = '进入上次线路…';
-              go(saved);
+            if (saved && known(saved) && Date.now() - at < TTL) {
+              tip.textContent = '检测上次线路…';
+              ping(saved, PHP_HOSTS.indexOf(saved) >= 0 ? '/api.php?action=sources' : '/abc.json').then(function (r) {
+                if (r) { go(saved); return; }
+                probeAll();
+              });
               return;
             }
           } catch (e) {}
         }
-        Promise.all(HOSTS.map(ping)).then(function (rows) {
-          var ok = [];
-          HOSTS.forEach(function (h, i) {
-            var r = rows[i];
-            var li = document.createElement('li');
-            if (r) {
-              ok.push(r);
-              li.innerHTML = '<span class="ok">' + h.replace(/^https:\/\//, '') + '</span><span class="ok">' + r.ms + 'ms</span>';
-            } else {
-              li.innerHTML = '<span class="fail">' + h.replace(/^https:\/\//, '') + '</span><span class="fail">超时</span>';
-            }
-            list.appendChild(li);
-          });
-          var pages = ok.filter(function (x) { return x.host === HOSTS[0]; })[0];
-          ok.sort(function (a, b) { return a.ms - b.ms; });
-          var pick = pages || ok[0];
-          if (pick) {
-            tip.textContent = '进入 ' + pick.host.replace(/^https:\/\//, '');
-            setTimeout(function () { go(pick.host); }, 200);
-          } else {
-            tip.textContent = '线路都不可达，请手动选择';
-            btns.classList.add('show');
-          }
-        });
+        probeAll();
       }
 
       document.getElementById('retry').onclick = function () { run(true); };
