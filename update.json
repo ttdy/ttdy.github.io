@@ -1,7 +1,7 @@
 {
   "versionCode": 23,
   "versionName": "1.22",
-  "note": "feat: 发布主版 v1.22，未设同步码不写入云端 ",
+  "note": "未设置同步码时不再上传云端记录。",
   "apk": "https://dl.tvgg.de5.net/v1.22/main/app-arm64-v8a-release.apk",
   "apkArm64": "https://dl.tvgg.de5.net/v1.22/main/app-arm64-v8a-release.apk",
   "apkArm": "https://dl.tvgg.de5.net/v1.22/main/app-armeabi-v7a-release.apk"
