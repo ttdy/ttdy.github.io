@@ -1,8 +1,8 @@
 {
-  "versionCode": 25,
-  "versionName": "1.24",
-  "note": "fix: fqzy/lsb 首页无海报，发布 v1.24 批量补图改走 PHP poster，避免详情接口只回一条。 ",
-  "apk": "https://dl.tvgg.de5.net/v1.24/tap/app-arm64-v8a-release.apk",
-  "apkArm64": "https://dl.tvgg.de5.net/v1.24/tap/app-arm64-v8a-release.apk",
-  "apkArm": "https://dl.tvgg.de5.net/v1.24/tap/app-armeabi-v7a-release.apk"
+  "versionCode": 26,
+  "versionName": "1.25",
+  "note": "fix: 钉死 NDK 25.2，重发连点版 v1.25 ",
+  "apk": "https://dl.tvgg.de5.net/v1.25/tap/app-arm64-v8a-release.apk",
+  "apkArm64": "https://dl.tvgg.de5.net/v1.25/tap/app-arm64-v8a-release.apk",
+  "apkArm": "https://dl.tvgg.de5.net/v1.25/tap/app-armeabi-v7a-release.apk"
 }
