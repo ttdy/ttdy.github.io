@@ -1,8 +1,8 @@
 {
-  "versionCode": 27,
-  "versionName": "1.26",
-  "note": "播放页增加上一集/下一集，播完自动连播。",
-  "apk": "https://dl.tvgg.de5.net/v1.26/tap/app-arm64-v8a-release.apk",
-  "apkArm64": "https://dl.tvgg.de5.net/v1.26/tap/app-arm64-v8a-release.apk",
-  "apkArm": "https://dl.tvgg.de5.net/v1.26/tap/app-armeabi-v7a-release.apk"
+  "versionCode": 28,
+  "versionName": "1.27",
+  "note": "播放时按住画面 3 倍速快进，松手恢复。",
+  "apk": "https://dl.tvgg.de5.net/v1.27/tap/app-arm64-v8a-release.apk",
+  "apkArm64": "https://dl.tvgg.de5.net/v1.27/tap/app-arm64-v8a-release.apk",
+  "apkArm": "https://dl.tvgg.de5.net/v1.27/tap/app-armeabi-v7a-release.apk"
 }
